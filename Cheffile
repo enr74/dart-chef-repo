@@ -1,0 +1,30 @@
+site 'http://community.opscode.com/api/v1'
+
+cookbook "apt"
+
+cookbook 'homebrew'
+
+cookbook "mysql"
+
+cookbook "database"
+
+cookbook 'chef-client'
+
+cookbook "git"
+
+cookbook "apache2", "1.6.6" 
+
+cookbook "chef-solo-search",
+    :git => "https://github.com/edelight/chef-solo-search",
+    :ref => "0.4.0"
+
+cookbook "user",
+    :git => "https://github.com/fnichol/chef-user.git"
+
+
+cookbook "java",
+    :java => "https://github.com/opscode-cookbooks/java.git"
+
+cookbook "dart-cookbook",
+   :git => "https://github.com/enr74/dart-cookbook.git"
+
