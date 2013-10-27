@@ -21,6 +21,8 @@ SITE
       runit (>= 1.0.0)
       windows (>= 0.0.0)
       yum (>= 0.0.0)
+    hipsnip-jetty (0.9.0)
+      java (>= 1.10.0)
     homebrew (1.4.0)
     java (1.13.0)
       windows (>= 0.0.0)
@@ -48,18 +50,37 @@ GIT
     chef-solo-search (0.4.0)
 
 GIT
-  remote: https://github.com/enr74/dart-cookbook.git
-  ref: master
-  sha: 955bf9744b6f9aef6e579660e2d1c44dfb8c165b
-  specs:
-    dart-cookbook (0.0.1)
-
-GIT
   remote: https://github.com/fnichol/chef-user.git
   ref: master
   sha: ce45d05e13491a82cbb5a2c36292391f3a1aaa36
   specs:
     user (0.3.1)
+
+GIT
+  remote: https://github.com/hipsnip-cookbooks/jetty.git
+  ref: master
+  sha: a82f351b1b102e090fc5f258eeb839c7638ed9ed
+  specs:
+    jetty (0.9.0)
+      java (>= 1.10.0)
+
+GIT
+  remote: https://github.com/hipsnip-cookbooks/solr.git
+  ref: master
+  sha: f1567d2e537d698b2cc6d41da3431a3b840409b3
+  specs:
+    solr (0.4.2)
+      hipsnip-jetty (~> 0.9.0)
+
+PATH
+  remote: site-cookbooks/dart-install
+  specs:
+    dart-cookbook (0.0.1)
+
+PATH
+  remote: site-cookbooks/solr_4_2_1
+  specs:
+    solr_4_2_1 (0.1.0)
 
 DEPENDENCIES
   apache2 (= 1.6.6)
@@ -71,6 +92,9 @@ DEPENDENCIES
   git (>= 0)
   homebrew (>= 0)
   java (>= 0)
+  jetty (>= 0)
   mysql (>= 0)
+  solr (>= 0)
+  solr_4_2_1 (>= 0)
   user (>= 0)
 

@@ -102,7 +102,12 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
                 }
        }   
       chef.add_recipe "database::mysql"
-      chef.add_recipe "dart-cookbook::dart-install"
+      #chef.add_recipe "jetty"
+      #chef.add_recipe "solr"
+      chef.add_recipe "solr_4_2_1"
+      chef.add_recipe "dart-cookbook::netrc"
+      chef.add_recipe "dart-cookbook::dart-mvn-repo"      
+      chef.add_recipe "dart-cookbook::dart-content"
 
   #   chef.add_role "web"
   #
@@ -134,4 +139,10 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
   # chef-validator, unless you changed the configuration.
   #
   #   chef.validation_client_name = "ORGNAME-validator"
+end
+
+Vagrant::Config.run do |config|
+    # Forward guest port
+     config.vm.forward_port 80, 8000
+     config.vm.forward_port 8080, 8082
 end
