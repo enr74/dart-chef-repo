@@ -108,6 +108,8 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
       chef.add_recipe "dart-cookbook::netrc"
       chef.add_recipe "dart-cookbook::dart-mvn-repo"      
       chef.add_recipe "dart-cookbook::dart-content"
+      chef.add_recipe "dart-cookbook::config"
+
 
   #   chef.add_role "web"
   #

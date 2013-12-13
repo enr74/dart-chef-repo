@@ -73,9 +73,9 @@ GIT
       hipsnip-jetty (~> 0.9.0)
 
 PATH
-  remote: site-cookbooks/dart-install
+  remote: site-cookbooks/dart-cookbook
   specs:
-    dart-cookbook (0.0.1)
+    dart-cookbook (1.0.0)
 
 PATH
   remote: site-cookbooks/solr_4_2_1

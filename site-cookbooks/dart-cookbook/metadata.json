@@ -1,6 +1,6 @@
 {
-  "name": "dart-install",
-  "version": "0.0.1",
+  "name": "dart-cookbook",
+  "version": "1.0.0",
   "description": "Installs and configures dart artifacts",
   "long_description": "dart Cookbook\n==============\nInstalls and configures dart artifacts.",
   "maintainer": "dart",

@@ -25,15 +25,15 @@ cookbook "user",
 cookbook "java",
     :java => "https://github.com/opscode-cookbooks/java.git"
 
-cookbook "dart-cookbook",
-	:path => "site-cookbooks/dart-install"
-   #:git => "https://github.com/enr74/dart-cookbook.git"
-
 cookbook "jetty",
    :git => "https://github.com/hipsnip-cookbooks/jetty.git" 
 
 cookbook "solr",
    :git => "https://github.com/hipsnip-cookbooks/solr.git" 
+
+cookbook "dart-cookbook",
+   :path => "site-cookbooks/dart-cookbook"
+   #:git => "https://github.com/enr74/dart-cookbook.git"
    
 cookbook "solr_4_2_1",
 	:path => "site-cookbooks/solr_4_2_1"
